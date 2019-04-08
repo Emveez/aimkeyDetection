@@ -158,7 +158,7 @@ void *detect_in_thread(void *ptr)
 void *fetch_in_thread(void *ptr)
 {
 		free_image(buff[buff_index]);
-		buff[buff_index] = get_image_from_ss();
+		buff[buff_index] = get_image_from_ss(dualScreen);
 		if(buff[buff_index].data == 0) {
 				demo_done = 1;
 				return 0;
@@ -195,6 +195,9 @@ void demo(char *cfgfile, char *weightfile, float thresh, int cam_index, const ch
 	
 	//demo_frame = avg_frames;
 	//image **alphabet = load_alphabet();
+
+	dualScreen = fullscreen;
+
 	demo_names = names;
 	demo_alphabet = NULL;
 	demo_classes = classes;
@@ -215,7 +218,7 @@ void demo(char *cfgfile, char *weightfile, float thresh, int cam_index, const ch
 	}
 	avg = calloc(demo_total, sizeof(float));
 
-	buff[0] = get_image_from_ss();
+	buff[0] = get_image_from_ss(dualScreen);
 	buff[1] = copy_image(buff[0]);
 	buff[2] = copy_image(buff[0]);
 	buff_letter[0] = letterbox_image(buff[0], net->w, net->h);

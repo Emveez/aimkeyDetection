@@ -300,7 +300,7 @@ image get_image_from_stream(void *p)
 }
 
 
-image get_image_from_ss()
+image get_image_from_ss(int dual)
 {
 
 	Display* disp = XOpenDisplay(NULL);
@@ -311,8 +311,11 @@ image get_image_from_ss()
 
 	//printf("H: %i W: %i\n", height, width);
 
-	ScreenShot screen(0, 0, width/2, height); // Using two screens
-	//ScreenShot screen(0, 0, width, height); // Using two screens
+	if(dual){
+		ScreenShot screen(0, 0, width/2, height); // Using two screens
+	} else {
+		ScreenShot screen(0, 0, width, height); // Using one screen
+	}
 
 	Mat m;
 	screen(m);

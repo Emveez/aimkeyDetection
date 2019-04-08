@@ -823,7 +823,7 @@ void run_detector(int argc, char **argv)
     }
 
     //int clear = find_arg(argc, argv, "-clear");
-    int fullscreen = find_arg(argc, argv, "-fullscreen");
+    int fullscreen = find_int_arg(argc, argv, "-dual", 0);
     int width = find_int_arg(argc, argv, "-w", 0);
     int height = find_int_arg(argc, argv, "-h", 0);
     int fps = find_int_arg(argc, argv, "-fps", 0);
@@ -857,6 +857,8 @@ void run_detector(int argc, char **argv)
     //char *name_list = option_find_str(options, "names", "data/names.list");
     //char **names = get_labels(name_list);
 
-    demo("cfg/yolov3.cfg", "cfg/yolov3.weights", thresh, cam_index, 0, NULL, 0, frame_skip, prefix, avg, hier_thresh, width, height, fps, fullscreen);
+    printf("Dual: %i\n", fullscreen);
+
+    //demo("cfg/yolov3.cfg", "cfg/yolov3.weights", thresh, cam_index, 0, NULL, 0, frame_skip, prefix, avg, hier_thresh, width, height, fps, fullscreen);
 
 }
