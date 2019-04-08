@@ -15,4 +15,4 @@ For screenshot and mousebutton state the Xlib are used and for relative mouse mo
 
 
 ### Demo
-![Alt Text](https://media.giphy.com/media/UtnKFjAsl3nRd2zuAS/giphy.gif)
+![Alt Text](https://media.giphy.com/media/1Qn3CVajk66Gjl6EBm/giphy.gif)
