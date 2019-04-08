@@ -7,8 +7,12 @@ For screenshot and mousebutton state the Xlib are used and for relative mouse mo
 * CUDA (Tested with Cuda 8.0)
 * OpenCV (Tested with OpenCV 3.3.0)
 
-### Installation
+### Installation/Usage
 * Install dependencies according to [this](https://pjreddie.com/darknet/install/)
 * Get the weights
 * Compile with make and run with admin rights
 * Use mousebutton 3 i.e. push mouse scroll to aim 
+
+
+### Demo
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
