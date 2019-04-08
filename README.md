@@ -16,3 +16,5 @@ For screenshot and mousebutton state the Xlib are used and for relative mouse mo
 
 ### Demo
 ![Alt Text](https://media.giphy.com/media/1Qn3CVajk66Gjl6EBm/giphy.gif)
+
+The demo was perform with a GTX 1060 and Intel Core i5-6600 CPU @ 3.30GHz. With this hardware we could make detect at around 15 fps.
