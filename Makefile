@@ -4,9 +4,6 @@ OPENCV=1
 OPENMP=0
 DEBUG=0
 
-# run: sudo ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights
-# sudo rm -rf ~/.nv
-
 ARCH= -gencode arch=compute_30,code=sm_30 \
       -gencode arch=compute_35,code=sm_35 \
       -gencode arch=compute_50,code=[sm_50,compute_50] \
@@ -106,5 +103,6 @@ results:
 
 clean:
 	rm -rf obj $(OBJS) $(SLIB) $(ALIB) $(EXEC) $(EXECOBJ) $(OBJDIR)/*
+	rm -rf ./cfg/yolov3.weights
 
 
