@@ -1,7 +1,7 @@
 # Aimkey based on object detection algorithm
-This project aims to create an objecte detection type aimkey on Linux. It's based on [Darknet](https://pjreddie.com/darknet/) framework and does not read and write to any process memory as conventional external aimkeys. The logic behind the aimkey is that we capture a screenshot and pass is to the detection algorithm which returns the coordinates of a person object with the highest probability, then set the aim to this location.
+This project aims to create an object detection type aimkey on Linux. It's based on [Darknet](https://pjreddie.com/darknet/) framework and does not read and write to any process memory as conventional external aimkeys. The logic behind the aimkey is that we capture a screenshot and pass is to the detection algorithm which returns the coordinates of a person object with the highest probability, then set the aim to this location.
 
-For screenshot and mousebutton state the Xlib are used and for relative mouse move the device uinput is used. 
+For screenshot and mouse button state the Xlib is used and for relative mouse move the device uinput is used. 
 
 ### Dependencies
 * CUDA (Tested with Cuda 8.0)
@@ -12,10 +12,10 @@ For screenshot and mousebutton state the Xlib are used and for relative mouse mo
 * Install dependencies according to [this](https://pjreddie.com/darknet/install/)
 * Get the weights
 * Compile with make and run with admin rights
-* Use mousebutton 3 i.e. push mouse scroll to aim 
+* Use mouse button 3 i.e. push mouse scroll to aim 
 
 
 ### Demo
 ![Alt Text](https://media.giphy.com/media/1Qn3CVajk66Gjl6EBm/giphy.gif)
 
-The demo was perform with a GTX 1060 and Intel Core i5-6600 CPU @ 3.30GHz. With this hardware we could detect at around 15 fps.
+The demo was performed with a GTX 1060 gpu and Intel Core i5-6600 CPU @ 3.30GHz. With this hardware we could detect at around 15 fps which is not enough to make this an efficient aimkey. But much could be improved, one could train a simpler model which has lower inference time and hence improve the fps.
