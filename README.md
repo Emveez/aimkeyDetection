@@ -5,6 +5,7 @@ For screenshot and mousebutton state the Xlib are used and for relative mouse mo
 
 ### Dependencies
 * CUDA (Tested with Cuda 8.0)
+* CUDNN (Tested with CUDNN 7.1.4)
 * OpenCV (Tested with OpenCV 3.3.0)
 
 ### Installation/Usage
