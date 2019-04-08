@@ -12,6 +12,7 @@ For screenshot and mouse button state the Xlib is used and for relative mouse mo
 * Install dependencies according to [this](https://pjreddie.com/darknet/install/)
 * Get the weights
 * Compile with make and run with admin rights
+* For dual screen use the flag -dual
 * Use mouse button 3 i.e. push mouse scroll to aim 
 
 
