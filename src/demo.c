@@ -20,6 +20,7 @@ static network *net;
 static image buff [3];
 static image buff_letter[3];
 static int buff_index = 0;
+static int dualScreen;
 static float demo_thresh = 0;
 static float demo_hier = .5;
 static int running = 0;

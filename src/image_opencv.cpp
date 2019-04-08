@@ -312,10 +312,10 @@ image get_image_from_ss(int dual)
 	//printf("H: %i W: %i\n", height, width);
 
 	if(dual){
-		ScreenShot screen(0, 0, width/2, height); // Using two screens
-	} else {
-		ScreenShot screen(0, 0, width, height); // Using one screen
+		width = width/2; // Using two screens
 	}
+
+	ScreenShot screen(0, 0, width, height);
 
 	Mat m;
 	screen(m);
