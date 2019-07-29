@@ -17,6 +17,6 @@ For screenshot and mouse button state the Xlib is used and for relative mouse mo
 
 
 ### Demo
-![Alt Text](https://media.giphy.com/media/dAFTGMtnBzQhYlZTrs/giphy.gif -H 'accept: : image/*)
+![Alt Text](https://media.giphy.com/media/dAFTGMtnBzQhYlZTrs/giphy.gif)
 
 The demo was performed with a GTX 1080ti gpu and Intel Core i5-6600 cpu @ 3.30GHz. With this hardware detection is done at around 22 fps.
