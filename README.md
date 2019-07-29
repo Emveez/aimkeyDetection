@@ -17,6 +17,6 @@ For screenshot and mouse button state the Xlib is used and for relative mouse mo
 
 
 ### Demo
-![Alt Text](https://media.giphy.com/media/dUlExmduh1rsgSNT3s/giphy.gif)
+![Alt Text](https://media.giphy.com/media/dAFTGMtnBzQhYlZTrs/giphy.gif)
 
-The demo was performed with a GTX 1060 gpu and Intel Core i5-6600 cpu @ 3.30GHz. With this hardware we could detect at around 15 fps which is not enough to make this an efficient aimkey. But much could be improved, one could train a simpler model which has lower inference time and hence improve the aimkey system.
+The demo was performed with a GTX 1080ti gpu and Intel Core i5-6600 cpu @ 3.30GHz. With this hardware we could detect at around 22 fps.
