@@ -786,6 +786,7 @@ void network_detect(network *net, image im, float thresh, float hier_thresh, flo
 }
 */
 
+
 void run_detector(int argc, char **argv)
 {
     char *prefix = find_char_arg(argc, argv, "-prefix", 0);
@@ -824,6 +825,9 @@ void run_detector(int argc, char **argv)
 
     //int clear = find_arg(argc, argv, "-clear");
     int fullscreen = find_arg(argc, argv, "-dual");
+
+    int netSize = find_arg(argc, argv, "-networkSize");
+
     int width = find_int_arg(argc, argv, "-w", 0);
     int height = find_int_arg(argc, argv, "-h", 0);
     int fps = find_int_arg(argc, argv, "-fps", 0);
@@ -857,6 +861,9 @@ void run_detector(int argc, char **argv)
     //char *name_list = option_find_str(options, "names", "data/names.list");
     //char **names = get_labels(name_list);
 
-    demo("cfg/yolov3.cfg", "cfg/yolov3.weights", thresh, cam_index, 0, NULL, 0, frame_skip, prefix, avg, hier_thresh, width, height, fps, fullscreen);
+
+
+
+    demo("cfg/yolov3.cfg", "cfg/yolov3.weights", thresh, cam_index, 0, NULL, 0, frame_skip, prefix, avg, hier_thresh, width, height, fps, fullscreen, netSize);
 
 }

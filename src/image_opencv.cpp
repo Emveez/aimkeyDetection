@@ -107,7 +107,7 @@ void mouseHandler::move_mouse(int dx, int dy){
 		perror("error: write");
 
 	//usleep(15000);
-	usleep(10000);
+	usleep(500);
 }
 
 void mouseHandler::click(){
@@ -300,9 +300,10 @@ image get_image_from_stream(void *p)
 }
 
 
-image get_image_from_ss(int dual)
+image get_image_from_ss(int dual, int netS)
 {
 
+	//fetch screen size
 	Display* disp = XOpenDisplay(NULL);
 	Screen*  scrn = DefaultScreenOfDisplay(disp);
 	int height = scrn->height;
@@ -311,17 +312,47 @@ image get_image_from_ss(int dual)
 
 	//printf("H: %i W: %i\n", height, width);
 
+	int x = 0;
+	int y = 0;
+
+
 	if(dual){
-		width = width/2; // Using two screens
+		// use right screen as default
+		//x = int(width/2); 
+		//width = x;
+
+		// use left screen
+		x = 0;
+		width = int(width/2); 
+
 	}
 
-	ScreenShot screen(0, 0, width, height);
+	if(netS){
 
+		// use 416 as cut values
+		int n = 416;
+
+		int midpoint_x = int(width/2);
+		int midpoint_y = int(height/2);
+
+		x = midpoint_x - int(n/2);
+		y = midpoint_y - int(n/2);
+
+		width = n;
+		height = n;
+
+
+	}
+
+
+
+	ScreenShot screen(x, y, width, height);
 	Mat m;
 	screen(m);
 
-	//Mat m(height, width/2, CV_8UC4, Scalar(0, 0, 0, 0));
-	cv::resize(m, m, cv::Size(), 0.50, 0.50);
+	if(!netS){
+		cv::resize(m, m, cv::Size(), 0.50, 0.50);
+	}
 
 	if(m.empty()) return make_empty_image(0,0,0);
 	return mat_to_image(m);

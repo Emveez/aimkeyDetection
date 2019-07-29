@@ -306,7 +306,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
 		//printf("LEFT: %i TOP: %i RIGHT: %i BOT: %i dx: %i dy %i\n", left * 2, top * 2, right * 2, bot * 2, dx, dy);
 
 		// Step size toward target, lower values makes smooth steps
-		float stepScale = 0.5;
+		float stepScale = 0.7;
 
 		// These should be referenced
 		*middle_x = (int)-dx * stepScale;

@@ -22,6 +22,8 @@ extern void run_art(int argc, char **argv);
 extern void run_super(int argc, char **argv);
 extern void run_lsd(int argc, char **argv);
 
+
+
 void average(int argc, char *argv[])
 {
     char *cfgfile = argv[2];
